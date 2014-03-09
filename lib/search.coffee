@@ -24,12 +24,14 @@ module.exports =
     duckduckgo: 'https://www.duckduckgo.com/'
     twitter: 'https://twitter.com/search'
     github: 'https://github.com/search'
+    stackoverflow: 'http://stackoverflow.com/search'
 
   searchPrefixes:
     google: '#q='
     duckduckgo: '?q='
     twitter: '?q='
     github: '?q='
+    stackoverflow: '?q='
 
   getSearchTerm: ->
     # assumes an editor is in focus
