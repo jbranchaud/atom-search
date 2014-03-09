@@ -3,26 +3,52 @@ open = require 'open'
 module.exports =
   activate: ->
     atom.workspaceView.command 'search:google', =>
-      console.log 'search google'
-      open('http://www.google.com/#q=Atom+Editor')
+      url = @getSearchUrl('google')
+      console.log url
+      open(url)
     atom.workspaceView.command 'search:ddg', =>
-      console.log 'search ddg'
-      open('https://www.duckduckgo.com/?q=Atom+Editor')
+      url = @getSearchUrl('duckduckgo')
+      console.log url
+      open(url)
     atom.workspaceView.command 'search:twitter', =>
-      console.log 'search twitter'
-      open('https://twitter.com/search?q=Atom%20Editor')
+      url = @getSearchUrl('twitter')
+      console.log url
+      open(url)
     atom.workspaceView.command 'search:github', =>
-      console.log 'search github'
-      open('https://github.com/search?q=Atom+Editor')
+      url = @getSearchUrl('github')
+      console.log url
+      open(url)
 
-  toggle: ->
-    console.log "hello, search!"
-  #   console.log 'toggle search'
-  #
-  # atom.workspaceView.commands = 'search:new', ->
-  #   console.log 'hello, again'
+  baseSearchUrls:
+    google: 'https://www.google.com/'
+    duckduckgo: 'https://www.duckduckgo.com/'
+    twitter: 'https://twitter.com/search'
+    github: 'https://github.com/search'
 
-    # open('https://google.com')
+  searchPrefixes:
+    google: '#q='
+    duckduckgo: '?q='
+    twitter: '?q='
+    github: '?q='
+
+  getSearchTerm: ->
+    # assumes an editor is in focus
+    editor = atom.workspaceView.getActivePaneItem()
+    searchText = editor.getSelectedText()
+
+  getSearchUrl: (site) ->
+    searchTerm = @getSearchTerm()
+    if searchTerm == ""
+      @baseSearchUrls[site]
+    else
+      @baseSearchUrls[site] + @searchPrefixes[site] + @robotizeSearchTerm(searchTerm)
+
+  # transform the search term so that it can be appended to the URL
+  # this means:
+  # - replace whitespaces with +
+  # - #TODO remove/replace certain punctuation
+  robotizeSearchTerm: (term) ->
+    term.replace(' ', '+')
 
   # activate: (state) ->
   #   @searchView = new SearchView(state.searchViewState)
