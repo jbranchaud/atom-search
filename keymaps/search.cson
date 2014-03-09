@@ -7,5 +7,8 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
+
+# keybinding defaults to a google search for now
 '.workspace':
-  'ctrl-alt-o': 'search:toggle'
+  'ctrl-alt-s': 'search:google'
+
