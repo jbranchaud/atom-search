@@ -1,0 +1,14 @@
+{
+  "name": "search",
+  "main": "./lib/search",
+  "version": "0.0.0",
+  "description": "Open searches for various sites in your browser",
+  "repository": "https://github.com/jbranchaud/atom-search",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "open": "0.0.4"
+  }
+}
