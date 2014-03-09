@@ -6,5 +6,6 @@ Open searches in your default browser from Atom for the following sites:
 - DuckDuckGo
 - Twitter
 - GitHub
+- Bing
 
 <!-- screenshot/gif -->
