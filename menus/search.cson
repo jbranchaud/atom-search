@@ -1,7 +1,7 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
-'context-menu':
-  '.overlayer':
-      'Enable search': 'search:toggle'
+# 'context-menu':
+#   '.overlayer':
+#       'Enable search': 'search:toggle'
 
 'menu': [
   {
@@ -9,7 +9,10 @@
     'submenu': [
       'label': 'search'
       'submenu': [
-        { 'label': 'Toggle', 'command': 'search:toggle' }
+        { 'label': 'Google...',     'command': 'search:google'  },
+        { 'label': 'DuckDuckGo...', 'command': 'search:ddg'     },
+        { 'label': 'Twitter...',    'command': 'search:twitter' },
+        { 'label': 'GitHub...',     'command': 'search:github'  }
       ]
     ]
   }
