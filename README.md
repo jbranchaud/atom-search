@@ -22,3 +22,9 @@ You can highlight text and then select `google`, `ddg`, `twitter`, or `github` f
 ### From the command-line
 
     $ apm install search
+
+## License
+
+&copy; 2014 Josh Branchaud
+
+Licensed under the MIT license. See LICENSE.md for details.
