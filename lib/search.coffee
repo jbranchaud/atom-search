@@ -53,7 +53,7 @@ module.exports =
     if searchTerm == ""
       @baseSearchUrls[site]
     else {
-      spaceReplacement = if (site === "youtube") then "%20" else '+'
+      spaceReplacement = if (site === "youtube") then '%20' else '+'
       @baseSearchUrls[site] + @searchPrefixes[site] + @robotizeSearchTerm(searchTerm, spaceReplacement)
     }
 
