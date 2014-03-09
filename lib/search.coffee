@@ -18,6 +18,10 @@ module.exports =
       url = @getSearchUrl('github')
       console.log url
       open(url)
+    atom.workspaceView.command 'search:bing', =>
+      url = @getSearchUrl('bing')
+      console.log url
+      open(url)
 
   baseSearchUrls:
     google: 'https://www.google.com/'
