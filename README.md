@@ -7,5 +7,6 @@ Open searches in your default browser from Atom for the following sites:
 - Twitter
 - GitHub
 - Bing
+- YouTube
 
 <!-- screenshot/gif -->
