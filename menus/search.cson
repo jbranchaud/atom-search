@@ -7,7 +7,7 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'search'
+      'label': 'Search'
       'submenu': [
         { 'label': 'Google...',     'command': 'search:google'  },
         { 'label': 'DuckDuckGo...', 'command': 'search:ddg'     },
