@@ -12,7 +12,9 @@
         { 'label': 'Google...',     'command': 'search:google'  },
         { 'label': 'DuckDuckGo...', 'command': 'search:ddg'     },
         { 'label': 'Twitter...',    'command': 'search:twitter' },
-        { 'label': 'GitHub...',     'command': 'search:github'  }
+        { 'label': 'GitHub...',     'command': 'search:github'  },
+        { 'label': 'Bing...',     'command': 'search:bing'  },
+        { 'label': 'YouTube...',     'command': 'search:youtube'  }
       ]
     ]
   }
