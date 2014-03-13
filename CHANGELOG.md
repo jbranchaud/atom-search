@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.0
+
+- Adding support for search with Wikipedia
+- Minor refactoring
+
 ## v0.3.0
 
 - Adding support for search with StackOverflow
