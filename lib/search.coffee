@@ -3,30 +3,18 @@ open = require 'open'
 module.exports =
   activate: ->
     atom.workspaceView.command 'search:google', =>
-      url = @getSearchUrl('google')
-      console.log url
-      open(url)
+      open @getSearchUrl('google')
     atom.workspaceView.command 'search:ddg', =>
-      url = @getSearchUrl('duckduckgo')
-      console.log url
-      open(url)
+      open @getSearchUrl('duckduckgo')
     atom.workspaceView.command 'search:twitter', =>
-      url = @getSearchUrl('twitter')
-      console.log url
-      open(url)
+      open @getSearchUrl('twitter')
     atom.workspaceView.command 'search:github', =>
-      url = @getSearchUrl('github')
-      console.log url
-      open(url)
+      open @getSearchUrl('github')
     atom.workspaceView.command 'search:stackoverflow', =>
-      url = @getSearchUrl('stackoverflow')
-      console.log url
-      open(url)
+      open @getSearchUrl('stackoverflow')
     # currently only supporting wikipedia in English
     atom.workspaceView.command 'search:wikipedia', =>
-      url = @getSearchUrl('wikipedia')
-      console.log url
-      open(url)
+      open @getSearchUrl('wikipedia')
 
   baseSearchUrls:
     google: 'https://www.google.com/'
