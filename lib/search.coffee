@@ -22,6 +22,11 @@ module.exports =
       url = @getSearchUrl('stackoverflow')
       console.log url
       open(url)
+    # currently only supporting wikipedia in English
+    atom.workspaceView.command 'search:wikipedia', =>
+      url = @getSearchUrl('wikipedia')
+      console.log url
+      open(url)
 
   baseSearchUrls:
     google: 'https://www.google.com/'
@@ -29,6 +34,7 @@ module.exports =
     twitter: 'https://twitter.com/search'
     github: 'https://github.com/search'
     stackoverflow: 'http://stackoverflow.com/search'
+    wikipedia: 'http://en.wikipedia.org/'
 
   searchPrefixes:
     google: '#q='
@@ -36,6 +42,7 @@ module.exports =
     twitter: '?q='
     github: '?q='
     stackoverflow: '?q='
+    wikipedia: 'w/index.php?search='
 
   getSearchTerm: ->
     # assumes an editor is in focus
