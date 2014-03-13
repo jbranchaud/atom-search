@@ -18,18 +18,24 @@ module.exports =
       url = @getSearchUrl('github')
       console.log url
       open(url)
+    atom.workspaceView.command 'search:stackoverflow', =>
+      url = @getSearchUrl('stackoverflow')
+      console.log url
+      open(url)
 
   baseSearchUrls:
     google: 'https://www.google.com/'
     duckduckgo: 'https://www.duckduckgo.com/'
     twitter: 'https://twitter.com/search'
     github: 'https://github.com/search'
+    stackoverflow: 'http://stackoverflow.com/search'
 
   searchPrefixes:
     google: '#q='
     duckduckgo: '?q='
     twitter: '?q='
     github: '?q='
+    stackoverflow: '?q='
 
   getSearchTerm: ->
     # assumes an editor is in focus

@@ -9,10 +9,11 @@
     'submenu': [
       'label': 'Search'
       'submenu': [
-        { 'label': 'Google...',     'command': 'search:google'  },
-        { 'label': 'DuckDuckGo...', 'command': 'search:ddg'     },
-        { 'label': 'Twitter...',    'command': 'search:twitter' },
-        { 'label': 'GitHub...',     'command': 'search:github'  }
+        { 'label': 'Google...',         'command': 'search:google'  },
+        { 'label': 'DuckDuckGo...',     'command': 'search:ddg'     },
+        { 'label': 'Twitter...',        'command': 'search:twitter' },
+        { 'label': 'GitHub...',         'command': 'search:github'  },
+        { 'label': 'StackOverflow...',  'command': 'search:stackoverflow'  }
       ]
     ]
   }
