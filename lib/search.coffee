@@ -1,5 +1,19 @@
 open = require 'open'
 
+# The purpose of this module is to open a search page for a user for a
+# particular site. From the command palette, the user can start typing
+# *search* to see all search options or start typing the names of one
+# of the supported sites to get directly to that option.
+# Upon selecting one of the searches, one of two things will happen:
+# - If the user has selected text in the editor, then a search
+#   URL for the chosen site will be constructed and opened in the user's
+#   browser.
+# - If the user has no selected text in the editor, then the URL for
+#   the base search for the chosen site will be opened in the user's
+#   browser.
+#
+# Note: The user's default browser will be used.
+
 module.exports =
   activate: ->
     atom.workspaceView.command 'search:google', =>
@@ -42,6 +56,8 @@ module.exports =
     if searchTerm == ""
       @baseSearchUrls[site]
     else
+      # `encodeURI` makes sure spaces are properly encoded so that the browser
+      # can successfully open the URL.
       encodeURI(@baseSearchUrls[site] + @searchPrefixes[site] + searchTerm)
 
   # activate: (state) ->
