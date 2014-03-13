@@ -47,14 +47,7 @@ module.exports =
     if searchTerm == ""
       @baseSearchUrls[site]
     else
-      @baseSearchUrls[site] + @searchPrefixes[site] + @robotizeSearchTerm(searchTerm)
-
-  # transform the search term so that it can be appended to the URL
-  # this means:
-  # - replace whitespaces with +
-  # - #TODO remove/replace certain punctuation
-  robotizeSearchTerm: (term) ->
-    term.replace(' ', '+')
+      encodeURI(@baseSearchUrls[site] + @searchPrefixes[site] + searchTerm)
 
   # activate: (state) ->
   #   @searchView = new SearchView(state.searchViewState)
