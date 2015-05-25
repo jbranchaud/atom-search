@@ -9,6 +9,6 @@
 # https://atom.io/docs/latest/advanced/keymaps
 
 # keybinding defaults to a google search for now
-'.workspace':
+'atom-workspace':
   'ctrl-alt-s': 'search:google'
 
