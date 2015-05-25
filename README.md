@@ -23,7 +23,7 @@ You can highlight text and then select `google`, `ddg`, `twitter`, `github`, `st
 
 ### From the command-line
 
-    $ apm install search
+    $ apm install Search
 
 ## License
 
