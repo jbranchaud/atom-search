@@ -13,17 +13,17 @@ You can highlight text and then select `google`, `ddg`, `twitter`, `github`, `st
 
 <!-- screenshot/gif -->
 
-## Installing Search for Atom
+## Installing search for Atom
 
 ### From Atom
 
 - Open up the *Settings View* (`Cmd-,`)
 - Select the *Packages* tab
-- Search for *Search*
+- Search for *search*
 
 ### From the command-line
 
-    $ apm install Search
+    $ apm install search
 
 ## License
 
