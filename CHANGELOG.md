@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.1
+
+- Minor updates based on community-submitted issues
+
 ## v0.4.0
 
 - Adding support for search with Wikipedia
