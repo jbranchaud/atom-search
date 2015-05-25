@@ -27,6 +27,6 @@ You can highlight text and then select `google`, `ddg`, `twitter`, `github`, `st
 
 ## License
 
-&copy; 2014 Josh Branchaud
+&copy; 2014-2015 Josh Branchaud
 
 Licensed under the MIT license. See LICENSE.md for details.
