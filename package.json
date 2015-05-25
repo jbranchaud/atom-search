@@ -1,7 +1,7 @@
 {
   "name": "search",
   "main": "./lib/search",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Open searches for various sites in your browser",
   "repository": "https://github.com/jbranchaud/atom-search",
   "license": "MIT",
